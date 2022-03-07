@@ -19,11 +19,14 @@ class ListHeroAdapter (private val listUser: ArrayList<User>) : RecyclerView.Ada
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (username, name, company, photo) = listUser[position]
+        val (username, name, repository, photo) = listUser[position]
+        val repos = "$repository repositories"
+        val textUsername = "@$username"
+
         holder.binding.itemAvatar.setImageResource(photo)
-        holder.binding.tvUsername.text = username
+        holder.binding.tvUsername.text = textUsername
         holder.binding.tvName.text = name
-        holder.binding.tvCompany.text = company
+        holder.binding.tvRepo.text = repos
 
         holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listUser[holder.adapterPosition]) }
     }

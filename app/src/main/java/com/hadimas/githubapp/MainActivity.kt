@@ -1,9 +1,9 @@
 package com.hadimas.githubapp
 
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,22 +24,28 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll(listUsers)
         showRecycleList()
-    }
 
+    }
+//menambahkan data kedalam listUser
     private val listUsers: ArrayList<User>
         get() {
             val dataUserName = resources.getStringArray(R.array.username)
             val dataName = resources.getStringArray(R.array.name)
-            val dataCompany = resources.getStringArray(R.array.company)
+            val dataRepo = resources.getStringArray(R.array.repository)
             val dataPhoto = resources.obtainTypedArray(R.array.avatar)
+            val dataLocation = resources.getStringArray(R.array.location)
+            val dataFollower = resources.getStringArray(R.array.followers)
+            val dataFollowing = resources.getStringArray(R.array.following)
+            val dataCompany = resources.getStringArray(R.array.company)
             val listUser = ArrayList<User>()
             for (i in dataUserName.indices){
-                val user = User(dataUserName[i], dataName[i], dataCompany[i], dataPhoto.getResourceId(i, -1))
+                val user = User(dataUserName[i], dataName[i], dataRepo[i] , dataPhoto.getResourceId(i, -1), dataLocation[i], dataCompany[i], dataFollower[i], dataFollowing[i]  )
                 listUser.add(user)
             }
             return listUser
         }
 
+//    fungsi menampilkan recycle list
     private fun showRecycleList()  {
         if(applicationContext.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE){
             rvUser.layoutManager = GridLayoutManager(this, 2)
@@ -51,12 +57,10 @@ class MainActivity : AppCompatActivity() {
 
         listUserAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback{
             override fun onItemClicked(data : User){
-                showSelectedUser(data)
+                val intentToDetail = Intent(this@MainActivity, DetailUser::class.java)
+                intentToDetail.putExtra("DATA", data)
+                startActivity(intentToDetail)
             }
         })
-    }
-
-    private fun showSelectedUser(user : User){
-        Toast.makeText(this, "Item Selected : " + user.username, Toast.LENGTH_SHORT).show()
     }
 }

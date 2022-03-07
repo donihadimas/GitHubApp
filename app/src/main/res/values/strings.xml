@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">GitHub User App</string>
+    <string name="ic_location">ic_location</string>
+    <string name="title_follower">Follower</string>
+    <string name="title_following">Following</string>
+    <string name="repository">Repository</string>
+    <string name="icon_company">icon_company</string>
+    <string name="btn_follow">Follow</string>
+    <string name="ic_github">ic_github</string>
+    <string name="github_user_app">GitHub User App</string>
     <string-array name="username">
         <item>JakeWharton</item>
         <item>amitshekhariitbhu</item>

@@ -12,9 +12,10 @@
     android:layout_marginRight="8dp"
     android:layout_marginBottom="0dp"
     android:clickable="true"
+    android:focusable="true"
     card_view:cardCornerRadius="5dp"
-    card_view:cardElevation="0dp"
-    card_view:cardBackgroundColor="@android:color/transparent">
+    card_view:cardElevation="2dp"
+    card_view:cardBackgroundColor="@color/white2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -28,6 +29,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            card_view:civ_border_color="@color/purple"
+            card_view:civ_border_width="2dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
@@ -39,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             card_view:layout_constraintEnd_toEndOf="parent"
@@ -47,11 +51,13 @@
             card_view:layout_constraintTop_toTopOf="parent"
             tools:text="name" />
 
+
         <TextView
             android:id="@+id/tv_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/black"
             android:textSize="14sp"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintHorizontal_bias="0.0"
@@ -60,15 +66,16 @@
             tools:text="Username" />
 
         <TextView
-            android:id="@+id/tv_company"
+            android:id="@+id/tv_repo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/black"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toStartOf="@+id/tv_username"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_username"
-            tools:text="company" />
+            tools:text="repo" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
