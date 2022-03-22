@@ -7,10 +7,14 @@
         <entry key="app/src/main/res/drawable/ic_company_black.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_location.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_location_black.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_detail_user.xml" value="0.16707021791767554" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21678321678321677" />
+        <entry key="app/src/main/res/drawable/ic_people_black.xml" value="0.159" />
+        <entry key="app/src/main/res/layout/activity_detail_user.xml" value="0.21433715820312502" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_setttings.xml" value="0.11168032786885246" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.1261434712414296" />
-        <entry key="app/src/main/res/layout/row_user.xml" value="0.20945945945945946" />
+        <entry key="app/src/main/res/layout/fragment_followers.xml" value="0.13831967213114754" />
+        <entry key="app/src/main/res/layout/row_user.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/option_menu.xml" value="0.16015625" />
       </map>
     </option>
   </component>

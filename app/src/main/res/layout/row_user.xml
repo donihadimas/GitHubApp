@@ -14,18 +14,18 @@
     android:clickable="true"
     android:focusable="true"
     card_view:cardCornerRadius="5dp"
-    card_view:cardElevation="2dp"
-    card_view:cardBackgroundColor="@color/white2">
+    card_view:cardElevation="0dp"
+    card_view:cardBackgroundColor="@android:color/transparent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:padding="4dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/item_avatar"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
@@ -37,45 +37,19 @@
             tools:src="@drawable/user1"/>
 
         <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.0"
-            card_view:layout_constraintStart_toEndOf="@+id/item_avatar"
-            card_view:layout_constraintTop_toTopOf="parent"
-            tools:text="name" />
-
-
-        <TextView
             android:id="@+id/tv_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="@+id/item_avatar"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintHorizontal_bias="0.0"
-            card_view:layout_constraintStart_toStartOf="@+id/tv_name"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_name"
-            tools:text="Username" />
-
-        <TextView
-            android:id="@+id/tv_repo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/black"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.0"
-            card_view:layout_constraintStart_toStartOf="@+id/tv_username"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_username"
-            tools:text="repo" />
+            card_view:layout_constraintStart_toEndOf="@+id/item_avatar"
+            card_view:layout_constraintTop_toTopOf="@+id/item_avatar"
+            tools:text="name" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
