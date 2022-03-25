@@ -26,7 +26,7 @@ class FollowersFragment : Fragment(R.layout.fragment_followers) {
 
         adapter = ListSearchUserAdapter()
         adapter.notifyDataSetChanged()
-//        set data
+
         binding.apply {
             rvListuser.setHasFixedSize(true)
             rvListuser.layoutManager = LinearLayoutManager(activity)

@@ -16,4 +16,19 @@
     <string name="tab_text_2">Following</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="icon_repository">icon Repository</string>
+    <string name="favorite">Favorite</string>
+    <string name="empty_tv">No user favorites are displayed</string>
+    <string name="empty_icon">Empty Icon</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="themes_setting">Themes Setting</string>
+    <string name="themes_switcher">Themes Switcher</string>
+    <string name="choose_themes">Choose Themes</string>
+    <string name="set_repo">%1$d Repositories</string>
+    <string name="set_follower">%1$d Followers</string>
+    <string name="set_following">%1$d Following</string>
+    <string name="unknow">Unknow</string>
+    <string name="not_in_company">Not in Company</string>
+    <string name="set_username"> \&#64;%1$s</string>
+    <string name="share">Share</string>
 </resources>

@@ -27,7 +27,7 @@ class ListSearchUserAdapter : RecyclerView.Adapter<ListSearchUserAdapter.ListVie
             binding.root.setOnClickListener {
                 onItemClickCallback?.onItemClicked(users)
             }
-            val name = "@"+ users.login
+            val name = "@${users.login}"
             binding.apply {
                 tvUsername.text = name
                 Glide.with(itemView)
